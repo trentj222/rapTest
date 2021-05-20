@@ -5,16 +5,17 @@
     "@wdio/cli": "^7.6.0"
   },
   "scripts": {
-    "all": "npx wdio wdio.conf.js"
+    "all": "npx wdio wdio.conf.js",
+    "reportGen": "./node_modules/allure-commandline/bin/allure "
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/register": "^7.13.16",
     "@wdio/allure-reporter": "^7.6.0",
     "@wdio/local-runner": "^7.6.0",
     "@wdio/mocha-framework": "^7.6.0",
     "chromedriver": "^90.0.0",
-    "wdio-chromedriver-service": "^7.1.0",
-    "@babel/register": "^7.13.16",
-    "@babel/preset-env": "^7.14.2",
-    "@babel/core": "^7.14.3"
+    "wdio-chromedriver-service": "^7.1.0"
   }
 }
