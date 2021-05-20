@@ -12,7 +12,7 @@ describe('My rap name testing part 5', () => {
         await LandingPage.setInfo('Sarah123', 'J')
         await (await LandingPage.btnFemaleName).click()
         var topMostName = await (await LandingPage.topGenName).getText()
-        await expect(await topMostName.match(/( [S]|[S] )/)).toBeTruthy();
+        await expect(await topMostName.match(/( [S]|^[S]|[S] )/)).toBeTruthy();
     });
 });
 

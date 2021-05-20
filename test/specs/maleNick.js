@@ -15,7 +15,9 @@ describe('My rap name testing part 4', () => {
         // by itself
         var topMostName = await (await LandingPage.topGenName).getText()
         //below checks to make sure 'D' with either space before or after is in first item.
-        await expect(await topMostName.match(/( [D]|[D] )/)).toBeTruthy();
+        await expect(await topMostName.match(/( [D]|^[D]|[D] )/)).toBeTruthy();
+        //Below makes sure since we are in nickname mode that the full name is not present
+        await expect(await topMostName.match('Drent123')).toBeFalsy();
     });
 });
 
