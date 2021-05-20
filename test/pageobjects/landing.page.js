@@ -9,7 +9,10 @@ class LandingPage extends Page {
     get btnMaleName () { return $('[value="Suggest Male Rap Name"]') }
     get btnFemaleName () { return $('[value="Suggest Female Rap Name"]') }
     get mustEnterName () { return $('h1=You must enter your first name.')}
-
+    get checkBox () {return $('[type="checkbox"]')}
+    get topGenName () { return $('tbody:nth-child(1) tr:nth-child(1) td:nth-child(1) div:nth-child(1) > h1:nth-child(1)')
+    }
+    get rapNameTable() { return $$('//tbody/tr[1]/td[1]/div[1]/table[1]')}
     /**
      * a method to set firstName and lastInitial on page
      */
