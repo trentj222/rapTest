@@ -8,17 +8,15 @@ class LandingPage extends Page {
     get inputLastInitial () { return $('//tbody/tr[2]/td[2]/h2[1]/input[1]') }
     get btnMaleName () { return $('[value="Suggest Male Rap Name"]') }
     get btnFemaleName () { return $('[value="Suggest Female Rap Name"]') }
+    get mustEnterName () { return $('h1=You must enter your first name.')}
 
     /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
+     * a method to set firstName and lastInitial on page
      */
     async setInfo (firstName, lastInitial) {
         await (await this.inputFirstName).setValue(firstName);
         await (await this.inputLastInitial).setValue(lastInitial);
-        await (await this.btnMaleName).click();
     }
-
     /**
      * overwrite specifc options to adapt it to page object
      */
